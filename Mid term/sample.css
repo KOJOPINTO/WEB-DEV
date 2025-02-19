@@ -1,0 +1,321 @@
+/* General body styles */
+body {
+    font-family: 'Lato', sans-serif; /* Set default font */
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Default text color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-rows: auto 1fr auto; /* Define rows for header, main, and footer */
+    grid-template-columns: 1fr; /* Single column layout */
+    min-height: 100vh; /* Ensure the page takes at least the full viewport height */
+}
+
+/* Grid Layout for the entire page */
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between; /* Space out logo and navigation */
+    align-items: center; /* Center items vertically */
+    padding: 15px 10px; /* Add padding */
+    background-color: lightseagreen; /* Header background color */
+    border-bottom: 1px solid #ddd; /* Add a border at the bottom */
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick to the top */
+    left: 0; /* Stick to the left */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+/* Logo styles */
+.logo img {
+    width: 100px; /* Set logo width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align navigation links to the right */
+    gap: 20px; /* Space between links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 0 20px; /* Add padding to prevent links from touching edges */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Link color */
+    font-size: 1rem; /* Link font size */
+    font-weight: bold; /* Bold text */
+    padding: 5px 10px; /* Add padding */
+    white-space: nowrap; /* Prevent text from breaking */
+}
+
+nav a:hover {
+    color: #0066cc; /* Change color on hover */
+}
+
+/* Hero Section */
+.hero {
+    display: grid;
+    place-items: center; /* Center content */
+    background: url('images/BG.jpg') no-repeat center center/cover; /* Background image */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 100px 20px; /* Add padding */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Large heading */
+    margin: 0; /* Remove default margin */
+}
+
+.hero p {
+    font-size: 1.5rem; /* Subheading size */
+    margin: 10px 0 20px; /* Add margin */
+}
+
+.hero button {
+    background-color: #b8860b; /* Gold button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.hero button:hover {
+    background-color: #8b6508; /* Darker gold on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    gap: 20px; /* Space between features */
+    padding: 20px; /* Add padding */
+}
+
+.features h2 {
+    text-align: center; /* Center heading */
+    font-size: 2rem; /* Heading size */
+}
+
+/* Product and Feature Grids */
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Add spacing between items */
+    padding: 10px;
+
+}
+
+
+.product-grid button {
+    background-color: #b8860b; /* Gold button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    margin-top: 20px; /* Add margin */
+}
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center items */
+}
+
+/* Feature styles */
+.feature {
+    text-align: center; /* Center content */
+}
+
+.feature p {
+    font-size: 1.5rem; /* Paragraph size */
+    line-height: 1.5; /* Improve readability */
+}
+
+.feature img {
+    width: 100%; /* Make images responsive */
+    max-width: 150px; /* Limit maximum size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    margin: 10px; /* Add margin */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.feature img:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+}
+
+/* Call-to-Action Section */
+.cta {
+    display: grid;
+    place-items: center; /* Center content */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add padding */
+    background-color: #f0f0f0; /* Light background */
+}
+
+.cta p {
+    font-size: 1.5rem; /* Paragraph size */
+    line-height: 1.5; /* Improve readability */
+}
+
+.cta img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Center image */
+    display: block; /* Ensure image is block-level */
+}
+
+.cta button {
+    background-color: #b8860b; /* Gold button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    margin-top: 20px; /* Add margin */
+}
+
+.cta button:hover {
+    background-color: #996515; /* Darker gold on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark background */
+    color: white; /* Text color */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center text */
+    display: grid; /* Use grid for layout */
+    gap: 10px; /* Space between items */
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between items */
+}
+
+.footer-section h3 {
+    font-size: 1.2rem; /* Heading size */
+    margin-bottom: 10px; /* Add margin */
+}
+
+.footer-section a {
+    color: #b8860b; /* Gold color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Center social links */
+    gap: 10px; /* Space between links */
+}
+
+.social-links a {
+    color: white; /* Icon color */
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+.social-links a:hover {
+    color: #b8860b; /* Gold color on hover */
+}
+
+/* Responsive Design */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack logo and navigation vertically */
+        text-align: center; /* Center content */
+    }
+
+    .logo img {
+        margin-bottom: 10px; /* Add margin below logo */
+    }
+
+    nav {
+        justify-content: center; /* Center navigation links */
+        gap: 10px; /* Reduce gap */
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center links */
+        gap: 5px; /* Reduce gap */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Smaller heading */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Smaller subheading */
+    }
+
+    .feature-grid,
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+
+    }
+
+
+
+
+    .cta {
+        padding: 10px; /* Reduce padding */
+    }
+
+    footer {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem; /* Smaller heading */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Smaller subheading */
+    }
+
+    .cta img {
+        max-width: 100%; /* Make images responsive */
+    }
+
+    .feature {
+        grid-column: 1 / -1; /* Full width on very small screens */
+    }
+
+    .footer-section {
+        text-align: center; /* Center text */
+    }
+
+    .social-links {
+        flex-direction: column; /* Stack social links vertically */
+        align-items: center; /* Center links */
+    }
+}
